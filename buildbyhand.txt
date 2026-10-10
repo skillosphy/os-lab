@@ -1,0 +1,4 @@
+gcc -Wall -c mylib.c -o mylib.o               # makes mylib.o
+ar rcs libmylib.a mylib.o             # packs .o into a .a archive
+gcc -Wall main.c libmylib.a -o app_static
+./app_static
