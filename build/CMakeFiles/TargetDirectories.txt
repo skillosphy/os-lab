@@ -1,0 +1,2 @@
+/mnt/c/Users/pc/Desktop/os/os-lab/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/pc/Desktop/os/os-lab/build/CMakeFiles/rebuild_cache.dir
