@@ -1,4 +1,20 @@
+Static library
+
 gcc -Wall -c mylib.c -o mylib.o               # makes mylib.o
 ar rcs libmylib.a mylib.o             # packs .o into a .a archive
 gcc -Wall main.c libmylib.a -o app_static
 ./app_static
+
+Dynamic library
+
+gcc -Wall -fPIC -shared mylib.c -o libmylib.so  #fPIC makes a .so
+gcc -Wall main.c -L. -lmylib -o app_shared  # -L means look for libarries in folder
+LD_LIBRARY_PATH=. ./app_shared
+
+# -lmylib means link libmylib.so and drop lib prefix
+
+
+A system installed library needs no -L or -I only -l
+gcc main.c -lm        # math library
+gcc main.c -lsqlite3  # after: sudo apt install libsqlite3-dev
+
